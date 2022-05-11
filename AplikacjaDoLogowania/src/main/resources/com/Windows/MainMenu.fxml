@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="471.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controller.FXMLListMenuController">
+   <center>
+      <TableView fx:id="tableView" editable="true" prefHeight="413.0" prefWidth="568.0" style="-fx-background-color: #baffce;" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="scannerNumberColumn" onEditStart="#mouseClickedOnTableView" prefWidth="98.66665649414062" text="Numer skanera" />
+            <TableColumn fx:id="loggedColumn" onEditStart="#mouseClickedOnTableView" prefWidth="188.0" text="Zalogowany" />
+            <TableColumn fx:id="dateColumn" onEditStart="#mouseClickedOnTableView" prefWidth="198.0" text="Data wydania" />
+            <TableColumn fx:id="serviceColumn" minWidth="0.0" onEditStart="#mouseClickedOnTableView" text="Serwis" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="568.0" style="-fx-background-color: #3ae86b;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="allScannersButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedAllScannersButton" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" style="-fx-background-color: #40ff76; -fx-background-radius: 20; -fx-border-radius: 20;" text="Wszystkie skanery" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="searchScannersButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedSearchScannerButton" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" style="-fx-background-color: #40ff76; -fx-background-radius: 20; -fx-border-radius: 20;" text="Wyszukaj skaner" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="serviceScannersButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedInServiceScannersButton" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" style="-fx-background-color: #40ff76; -fx-background-radius: 20; -fx-border-radius: 20;" text="Skanery w serwisie" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="changeToImageMenuButton" mnemonicParsing="false" onMouseClicked="#onMouseClickedChangeToImageMenu" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" style="-fx-background-color: #40ff76; -fx-background-radius: 20; -fx-border-radius: 20;" text="Menu obrazkowe" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <Label text="Autorska aplikacja Patryka Łasek , w razie problemów prosimy o bezpośredni kontakt z lokal IT Piaseczno" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
